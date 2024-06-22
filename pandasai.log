@@ -1,0 +1,490 @@
+2024-06-22 14:15:39 [INFO] Question: show barplot
+
+2024-06-22 14:15:39 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-06-22 14:15:39 [INFO] Prompt ID: 6947f950-a377-44ab-a07f-0885b6a64079
+2024-06-22 14:15:39 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-06-22 14:15:39 [INFO] Executing Step 0: ValidatePipelineInput
+2024-06-22 14:15:39 [INFO] Executing Step 1: CacheLookup
+2024-06-22 14:15:39 [INFO] Executing Step 2: PromptGeneration
+2024-06-22 14:15:39 [INFO] Using prompt: <dataframe>
+dfs[0]:399x3
+3.74E-01,1.08E+00,0.00E+00
+0.557,0.366,0.0
+0.601,0.936,0.0
+-0.0946,0.487,1.0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show barplot
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-06-22 14:15:39 [INFO] Executing Step 3: CodeGenerator
+2024-06-22 14:15:41 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-06-22 14:15:41 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:399x3
+3.74E-01,1.08E+00,0.00E+00
+0.557,0.366,0.0
+0.601,0.936,0.0
+-0.0946,0.487,1.0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show barplot
+
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-06-22 14:15:41 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of DataFrames
+df = dfs[0]  # Select the first DataFrame from the list
+
+# Create a bar plot
+plt.bar(range(len(df)), df.iloc[:, 0])  # Plot the first column
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.title('Bar Plot of First Column')
+plt.savefig('barplot.png')
+
+# Declare result var:
+result = {"type": "plot", "value": "barplot.png"}
+            ```
+            
+2024-06-22 14:15:41 [INFO] Executing Step 4: CachePopulation
+2024-06-22 14:15:41 [INFO] Executing Step 5: CodeCleaning
+2024-06-22 14:15:41 [INFO] Saving charts to C:\Users\lenovo\OneDrive\Documents\GitHub\Databot\exports\charts\temp_chart.png
+2024-06-22 14:15:41 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.bar(range(len(df)), df.iloc[:, 0])
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.title('Bar Plot of First Column')
+plt.savefig('C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png'}
+        ```
+2024-06-22 14:15:41 [INFO] Executing Step 6: CodeExecution
+2024-06-22 14:15:43 [INFO] Executing Step 7: ResultValidation
+2024-06-22 14:15:43 [INFO] Answer: {'type': 'plot', 'value': 'C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png'}
+2024-06-22 14:15:43 [INFO] Executing Step 8: ResultParsing
+2024-06-22 14:18:55 [INFO] Question: show barplot
+2024-06-22 14:18:55 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-06-22 14:18:55 [INFO] Prompt ID: 056e3e10-0429-4550-9aee-38386be99523
+2024-06-22 14:18:55 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-06-22 14:18:55 [INFO] Executing Step 0: ValidatePipelineInput
+2024-06-22 14:18:55 [INFO] Executing Step 1: CacheLookup
+2024-06-22 14:18:55 [INFO] Executing Step 2: PromptGeneration
+2024-06-22 14:18:55 [INFO] Using prompt: <dataframe>
+dfs[0]:399x3
+3.74E-01,1.08E+00,0.00E+00
+0.469,0.562,1.0
+0.0852,0.966,1.0
+-0.173,0.712,0.0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show barplot
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-06-22 14:18:55 [INFO] Executing Step 3: CodeGenerator
+2024-06-22 14:18:57 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-06-22 14:18:57 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:399x3
+3.74E-01,1.08E+00,0.00E+00
+0.469,0.562,1.0
+0.0852,0.966,1.0
+-0.173,0.712,0.0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show barplot
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-06-22 14:18:57 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of dataframes, we'll use the first dataframe
+df = dfs[0]
+
+# Create a bar plot
+plt.bar(range(len(df)), df.iloc[:, 0])
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.title('Bar Plot of First Column')
+plt.savefig('bar_plot.png')
+
+# Declare result var:
+result = {"type": "plot", "value": "bar_plot.png"}
+            ```
+            
+2024-06-22 14:18:57 [INFO] Executing Step 4: CachePopulation
+2024-06-22 14:18:57 [INFO] Executing Step 5: CodeCleaning
+2024-06-22 14:18:57 [INFO] Saving charts to C:\Users\lenovo\OneDrive\Documents\GitHub\Databot\exports\charts\temp_chart.png
+2024-06-22 14:18:57 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.bar(range(len(df)), df.iloc[:, 0])
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.title('Bar Plot of First Column')
+plt.savefig('C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png'}
+        ```
+2024-06-22 14:18:57 [INFO] Executing Step 6: CodeExecution
+2024-06-22 14:18:58 [INFO] Executing Step 7: ResultValidation
+2024-06-22 14:18:58 [INFO] Answer: {'type': 'plot', 'value': 'C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png'}
+2024-06-22 14:18:58 [INFO] Executing Step 8: ResultParsing
+2024-06-22 14:19:26 [INFO] Question: show barplot
+2024-06-22 14:19:26 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-06-22 14:19:26 [INFO] Prompt ID: 1112832b-ceef-428c-820a-e2ff2218f31e
+2024-06-22 14:19:26 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-06-22 14:19:26 [INFO] Executing Step 0: ValidatePipelineInput
+2024-06-22 14:19:26 [INFO] Executing Step 1: CacheLookup
+2024-06-22 14:19:26 [INFO] Executing Step 2: PromptGeneration
+2024-06-22 14:19:26 [INFO] Using prompt: <dataframe>
+dfs[0]:399x3
+3.74E-01,1.08E+00,0.00E+00
+0.397,0.299,1.0
+0.359,0.407,1.0
+0.387,0.917,0.0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show barplot
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-06-22 14:19:26 [INFO] Executing Step 3: CodeGenerator
+2024-06-22 14:19:28 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-06-22 14:19:28 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:399x3
+3.74E-01,1.08E+00,0.00E+00
+0.397,0.299,1.0
+0.359,0.407,1.0
+0.387,0.917,0.0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show barplot
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-06-22 14:19:28 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of DataFrames
+dfs = [...]  # your list of DataFrames
+
+# Select the first DataFrame
+df = dfs[0]
+
+# Create a bar plot
+plt.bar(df.index, df.iloc[:, 0])
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.title('Bar Plot')
+plt.savefig('bar_plot.png')
+
+# Declare result var:
+result = {"type": "plot", "value": "bar_plot.png"}
+            ```
+            
+2024-06-22 14:19:28 [INFO] Executing Step 4: CachePopulation
+2024-06-22 14:19:28 [INFO] Executing Step 5: CodeCleaning
+2024-06-22 14:19:28 [INFO] Saving charts to C:\Users\lenovo\OneDrive\Documents\GitHub\Databot\exports\charts\temp_chart.png
+2024-06-22 14:19:28 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.bar(df.index, df.iloc[:, 0])
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.title('Bar Plot')
+plt.savefig('C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png'}
+        ```
+2024-06-22 14:19:28 [INFO] Executing Step 6: CodeExecution
+2024-06-22 14:19:29 [INFO] Executing Step 7: ResultValidation
+2024-06-22 14:19:29 [INFO] Answer: {'type': 'plot', 'value': 'C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png'}
+2024-06-22 14:19:29 [INFO] Executing Step 8: ResultParsing
+2024-06-22 14:22:31 [INFO] Question: show barplot
+2024-06-22 14:22:31 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-06-22 14:22:31 [INFO] Prompt ID: 2938ade4-606d-47bf-8c73-8d3dd13782b0
+2024-06-22 14:22:31 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-06-22 14:22:31 [INFO] Executing Step 0: ValidatePipelineInput
+2024-06-22 14:22:31 [INFO] Executing Step 1: CacheLookup
+2024-06-22 14:22:31 [INFO] Executing Step 2: PromptGeneration
+2024-06-22 14:22:31 [INFO] Using prompt: <dataframe>
+dfs[0]:399x3
+3.74E-01,1.08E+00,0.00E+00
+0.681,0.503,1.0
+0.0844,1.0,1.0
+0.793,0.641,0.0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show barplot
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-06-22 14:22:31 [INFO] Executing Step 3: CodeGenerator
+2024-06-22 14:22:33 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-06-22 14:22:33 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:399x3
+3.74E-01,1.08E+00,0.00E+00
+0.681,0.503,1.0
+0.0844,1.0,1.0
+0.793,0.641,0.0
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show barplot
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-06-22 14:22:33 [INFO] Code generated:
+            ```
+            import pandas as pd
+import matplotlib.pyplot as plt
+
+# Assuming dfs is a list of DataFrames
+df = dfs[0]
+
+# Create a bar plot
+plt.bar(range(len(df)), df.iloc[:, 0])
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.title('Bar Plot of First Column')
+plt.savefig('bar_plot.png')
+
+# Declare result var:
+result = {"type": "plot", "value": "bar_plot.png"}
+            ```
+            
+2024-06-22 14:22:33 [INFO] Executing Step 4: CachePopulation
+2024-06-22 14:22:33 [INFO] Executing Step 5: CodeCleaning
+2024-06-22 14:22:33 [INFO] Saving charts to C:\Users\lenovo\OneDrive\Documents\GitHub\Databot\exports\charts\temp_chart.png
+2024-06-22 14:22:33 [INFO] 
+Code running:
+```
+df = dfs[0]
+plt.bar(range(len(df)), df.iloc[:, 0])
+plt.xlabel('Index')
+plt.ylabel('Value')
+plt.title('Bar Plot of First Column')
+plt.savefig('C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png')
+result = {'type': 'plot', 'value': 'C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png'}
+        ```
+2024-06-22 14:22:33 [INFO] Executing Step 6: CodeExecution
+2024-06-22 14:22:35 [INFO] Executing Step 7: ResultValidation
+2024-06-22 14:22:35 [INFO] Answer: {'type': 'plot', 'value': 'C:/Users/lenovo/OneDrive/Documents/GitHub/Databot/exports/charts/temp_chart.png'}
+2024-06-22 14:22:35 [INFO] Executing Step 8: ResultParsing
